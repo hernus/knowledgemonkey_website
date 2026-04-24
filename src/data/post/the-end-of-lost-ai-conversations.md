@@ -10,7 +10,7 @@ tags:
   - knowledge-management
   - vision
 metadata:
-  canonical: https://knowledgemonkey.com/blog/the-end-of-lost-ai-conversations
+  canonical: https://knowledgemonkey.ai/blog/the-end-of-lost-ai-conversations
 ---
 
 Here's a thought experiment: pull up your favourite AI chat app. Scroll back six months. Find the single best answer it ever gave you.

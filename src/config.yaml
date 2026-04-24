@@ -1,6 +1,6 @@
 site:
   name: KnowledgeMonkey
-  site: 'https://knowledgemonkey.com'
+  site: 'https://knowledgemonkey.ai'
   base: '/'
   trailingSlash: false
 

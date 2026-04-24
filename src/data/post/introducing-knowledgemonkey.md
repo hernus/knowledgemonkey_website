@@ -10,7 +10,7 @@ tags:
   - ai
   - knowledge-management
 metadata:
-  canonical: https://knowledgemonkey.com/blog/introducing-knowledgemonkey
+  canonical: https://knowledgemonkey.ai/blog/introducing-knowledgemonkey
 ---
 
 We use AI more than ever — and lose more brilliant conversations than ever. Today we're opening up **KnowledgeMonkey**, the place we wished existed: an AI-native home for everything you learn, plan, and create with AI by your side.
@@ -45,6 +45,6 @@ The full core of KnowledgeMonkey is free, on every platform — web, iOS and And
 
 ## How to start
 
-[Open the app](https://app.knowledgemonkey.com) and tap "New project." Try one of the [flagship use cases](/#use-cases) — capture notes from your last AI chat, build a 10-lesson course on something you've always wanted to learn, or dictate a chapter on your next walk.
+[Open the app](https://knowledgemonkey.ai) and tap "New project." Try one of the [flagship use cases](/#use-cases) — capture notes from your last AI chat, build a 10-lesson course on something you've always wanted to learn, or dictate a chapter on your next walk.
 
 We'd love to see what you build with it.

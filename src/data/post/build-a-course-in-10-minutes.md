@@ -10,7 +10,7 @@ tags:
   - voice
   - learning
 metadata:
-  canonical: https://knowledgemonkey.com/blog/build-a-course-in-10-minutes
+  canonical: https://knowledgemonkey.ai/blog/build-a-course-in-10-minutes
 ---
 
 You've always wanted to understand nutrition properly — not the influencer version, the actual basics. You have one hour. Let's build the course.

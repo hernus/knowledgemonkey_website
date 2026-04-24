@@ -10,7 +10,7 @@ tags:
   - llm
   - workflow
 metadata:
-  canonical: https://knowledgemonkey.com/blog/right-llm-for-the-job
+  canonical: https://knowledgemonkey.ai/blog/right-llm-for-the-job
 ---
 
 For a year, "which AI do you use?" had a single answer for most people. That era is ending fast. The frontier models have specialized — and the people getting the most out of AI now treat them like a small team of contractors, not a single oracle.

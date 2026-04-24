@@ -9,391 +9,358 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import brainHeroImage from '~/assets/images/brain3.png';
+import thinkingImage from '~/assets/images/thinking2.png';
+import aiBakedInImage from '~/assets/images/AI_baked_in.png';
+import stepsImage from '~/assets/images/steps.png';
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'KnowledgeMonkey — Your AI-native second brain',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero ******************* -->
 
   <Hero
+    tagline="Web · iOS · Android · Free to start"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
+        text: 'Get started — free',
+        href: 'https://app.knowledgemonkey.com',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:rocket',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'See how it works', href: '#use-cases', icon: 'tabler:player-play' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{
+      src: brainHeroImage,
+      width: brainHeroImage.width,
+      height: brainHeroImage.height,
+      alt: 'KnowledgeMonkey — your AI-native second brain',
+      class: 'mx-auto rounded-md w-auto h-auto max-h-[600px]',
+    }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Your <span class="text-accent">second brain</span>,<br />
+      built for <span class="text-accent">AI</span>.
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">KnowledgeMonkey</span> is the AI-native place to capture, organize and converse
+        with everything you learn.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-amber-600">Capture. Organize. Talk to it.</span>
+      Talk hands-free, switch between GPT, Claude or Perplexity, and turn scattered chats into notes, courses, books
+      and study material you actually keep.
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Note ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note
+    title="Built for AI from the ground up:"
+    description="Give structure to the conversations you have with AI."
+  />
 
-  <!-- Features Widget *************** -->
+  <!-- Features *************** -->
 
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    title="Everything an AI-native brain needs"
+    subtitle="Capture by voice. Organize visually. Search semantically. Take it everywhere — and own every byte."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Talk to it, hands-free',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Drive, walk, cook — capture ideas and have full back-and-forth conversations with your knowledge base, no keyboard required.',
+        icon: 'tabler:microphone',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Choose your LLM',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Plug into GPT, Claude, Perplexity and many more. Pick the right model for the job — or bring your own API key.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Best Practices',
+        title: 'AI-searchable knowledge chunks',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Your knowledge is broken into semantic chunks. No matter how big it gets, the AI always finds the right bits.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Tree, mind map, or list',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Reorganize the same knowledge as a tree, a mind map, or a simple list — whichever way your brain prefers.',
+        icon: 'tabler:sitemap',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Use it from inside ChatGPT',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Already living in ChatGPT? Hook KnowledgeMonkey in and let it remember everything for you across sessions.',
+        icon: 'tabler:plug-connected',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'No data lock-in, ever',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Export your entire brain as Markdown, plain text or CSV any time. It is your knowledge — we just give it a great home.',
+        icon: 'tabler:download',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Content (Problem framing) **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="The problem"
+    title="AI conversations vanish. Your knowledge shouldn't."
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'You ask, you learn, you forget',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Brilliant chats with AI scroll off the screen. A week later you cannot find that genius answer about your business idea.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'No structure, no recall',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Linear chat threads were never designed to be a knowledge base. There is no shape, no index, no map.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'KnowledgeMonkey solidifies it',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Every insight becomes a chunk. Chunks become trees, maps and projects. Your AI conversations finally compound.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: thinkingImage,
+      width: thinkingImage.width,
+      height: thinkingImage.height,
+      alt: 'Person thinking — knowledge from AI chats should not disappear',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        We give structure to your AI conversations.
+      </h3>
+      Stop losing the best parts of every chat.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-amber-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Use Cases — Flagship Four **************** -->
 
-  <Content
-    isAfterContent
+  <Features2
+    id="use-cases"
+    title="What people build with KnowledgeMonkey"
+    subtitle="Four flagship use cases — and a thousand more your monkey brain will invent."
+    tagline="Use cases"
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Capture & organize notes from AI',
+        description:
+          'Every great answer becomes a saved chunk. Tag it, link it, drop it into a project — your AI chats finally stay put.',
+        icon: 'tabler:notes',
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Build your own training courses',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Spin up a course like "Nutrition 101" — one hour, ten short lessons. Listen while you walk, chat at the end of each chapter, edit on the fly.',
+        icon: 'tabler:school',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Study for exams',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          'Drop your notes in, let the AI quiz you, generate flashcards, and explain the bits you got wrong — all in one place.',
+        icon: 'tabler:book-2',
       },
       {
-        title: 'Integration of media',
+        title: 'Write a book on the go',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'Dictate a chapter on a walk, restructure it into a tree, let the AI tighten the prose, export to Markdown when you ship.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Draft blog posts',
+        description:
+          'Capture the spark in voice, expand it with AI, slot it into your content tree, publish to your favourite platform.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Package & share knowledge projects',
+        description:
+          'Bundle a topic into a shareable project. Let others read it, remix it, contribute back — or keep it private. Up to you.',
+        icon: 'tabler:share-3',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-amber-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Features2>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
+  <!-- Steps — How it works ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="From idea to organized knowledge — in four steps."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Capture</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Tap, type or talk. Drop in a YouTube link, a paste from ChatGPT, a voice memo. Anything becomes a knowledge chunk.',
+        icon: 'tabler:microphone',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Organize</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Flip between tree, mind map and list. Drag chunks into projects. Let the AI suggest the structure for you.',
+        icon: 'tabler:sitemap',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Talk to it</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Hands-free chats with your own brain. Quiz yourself, draft a chapter, listen to a lesson — pick your favourite LLM.',
+        icon: 'tabler:message-chatbot',
       },
       {
-        title: 'Ready!',
+        title: 'Ship & share',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: stepsImage,
+      alt: 'From capture to share — your knowledge in clear steps',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Content — Built for AI ************ -->
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+  <Content
+    isReversed
+    isAfterContent
+    tagline="AI-native, end to end"
+    title="Not bolted-on AI. Born with it."
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
+        title: 'Multi-model by design',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          'Switch between GPT, Claude, Perplexity and others per project — or per question. The right brain for the right job.',
       },
       {
-        title: 'Features',
+        title: 'Semantic everything',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          'Every chunk is embedded and indexed. Search by meaning, not keywords. Scale to thousands of notes without losing the thread.',
       },
       {
-        title: 'Content',
+        title: 'Voice as a first-class input',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
+          'Hands-free conversations are not a feature. They are how the product was designed from day one.',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Generate, edit, restructure with AI',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+          'Let AI rewrite a lesson, condense a chapter, or turn a tree into a mind map — all from inside the app.',
       },
     ]}
+    image={{
+      src: aiBakedInImage,
+      width: aiBakedInImage.width,
+      height: aiBakedInImage.height,
+      alt: 'AI baked in — KnowledgeMonkey is AI-native from the ground up',
+    }}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-amber-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Content>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- Latest Blog ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+    title="From the troops"
+    information={`Product updates, deep dives on AI-native knowledge, and walkthroughs of real KnowledgeMonkey projects — from quick notes to full training courses.`}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- FAQs ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Frequently asked questions"
+    subtitle="Everything you need to know before you swing in."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'Is KnowledgeMonkey really free?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'Yes. The core app — capturing, organizing, voice chat with your own knowledge, exports — is free forever. Pro and Teams plans add cloud LLM credits, premium voices and advanced collaboration.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'Which LLMs can I use?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'GPT (OpenAI), Claude (Anthropic), Perplexity, and a growing list of others. Pick per project, per question, or bring your own API key on the Free plan.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'How does the hands-free voice mode work?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Tap once and start talking. KnowledgeMonkey transcribes you live, talks back through high-quality voices, and saves anything worth keeping straight into your knowledge base — perfect for walks, drives or workouts.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'What devices does it work on?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Desktop web, iOS and Android. Your knowledge syncs across all three so you can capture an idea on the move and refine it at your desk.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'Can I export my data?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'Anytime. Download everything as Markdown, plain text or CSV. No data lock-in — you own your brain.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'How does sharing work?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Bundle any set of chunks into a project. Share it as read-only, let trusted collaborators contribute, or keep it private. Great for teams, study groups, or publishing knowledge to the world.',
       },
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
+  <!-- CallToAction *********** -->
 
   <CallToAction
+    actionsLayout="vertical"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
+        text: 'Get started — free',
+        href: 'https://app.knowledgemonkey.com',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:rocket',
+      },
+      {
+        text: 'Download for iOS',
+        href: '#',
+        icon: 'tabler:brand-apple',
+      },
+      {
+        text: 'Download for Android',
+        href: '#',
+        icon: 'tabler:brand-android',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Your AI conversations,<br class="block sm:hidden" /> finally <span class="sm:whitespace-nowrap text-accent">remembered</span>.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Free forever core. Works on web, iOS and Android. Bring your own LLM, or use ours.
     </Fragment>
   </CallToAction>
 </Layout>

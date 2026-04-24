@@ -10,6 +10,7 @@ interface Props extends Widget {
   tagline?: string;
   callToAction?: CallToAction;
   actions?: string | CallToAction[];
+  actionsLayout?: 'horizontal' | 'vertical';
 }
 
 const {
@@ -17,12 +18,20 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   tagline = await Astro.slots.render('tagline'),
   actions = await Astro.slots.render('actions'),
+  actionsLayout = 'horizontal',
 
   id,
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const isVertical = actionsLayout === 'vertical';
+const actionsContainerClass = isVertical
+  ? 'max-w-md m-auto flex flex-col gap-3 mt-6'
+  : 'max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6';
+const actionItemClass = isVertical ? 'flex w-full' : 'flex w-full sm:w-auto';
+const actionButtonClass = isVertical ? 'w-full mb-0' : 'w-full sm:mb-0';
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
@@ -41,11 +50,11 @@ const {
     />
     {
       actions && (
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
+        <div class={actionsContainerClass}>
           {Array.isArray(actions) ? (
             actions.map((action) => (
-              <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
+              <div class={actionItemClass}>
+                <Button {...(action || {})} class={actionButtonClass} />
               </div>
             ))
           ) : (

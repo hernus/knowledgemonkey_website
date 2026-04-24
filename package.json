@@ -1,7 +1,7 @@
 {
   "name": "knowledgemonkey_website",
-  "version": "1.0.0-beta.52",
-  "description": "AstroWind: A free template using Astro 5.0 and Tailwind CSS. Astro starter theme.",
+  "version": "0.1.0",
+  "description": "KnowledgeMonkey marketing site — an AI-native place to capture, organize and converse with your knowledge.",
   "type": "module",
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >= 21.0.0"

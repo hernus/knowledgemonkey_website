@@ -1,0 +1,61 @@
+<svg
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="KnowledgeMonkey mark"
+>
+  <style>
+    .km-green {
+      fill: rgb(5, 150, 105);
+    }
+    .km-white {
+      fill: #ffffff;
+    }
+    .km-smile {
+      stroke: rgb(5, 150, 105);
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      fill: none;
+    }
+  </style>
+
+  <!-- Ears -->
+  <ellipse cx="12" cy="46" rx="9" ry="13" class="km-green" />
+  <ellipse cx="88" cy="46" rx="9" ry="13" class="km-green" />
+  <ellipse cx="13" cy="46" rx="5.8" ry="9" class="km-white" />
+  <ellipse cx="87" cy="46" rx="5.8" ry="9" class="km-white" />
+
+  <!-- Outer head -->
+  <path
+    class="km-green"
+    d="M22 54
+       C15 46 15 24 29 16
+       C39 10 47 13 50 21
+       C53 13 61 10 71 16
+       C85 24 85 46 78 54
+       C84 61 84 87 50 91
+       C16 87 16 61 22 54Z"
+  />
+
+  <!-- Face -->
+  <path
+    class="km-white"
+    d="M50 30
+       C43 20 33 20 27.5 29
+       C22 37 24 47 30 53
+       C23 58 22.5 77 50 80
+       C77.5 77 77 58 70 53
+       C76 47 78 37 72.5 29
+       C67 20 57 20 50 30Z"
+  />
+
+  <!-- Eyes -->
+  <ellipse cx="39.5" cy="44" rx="5.8" ry="7" class="km-green" />
+  <ellipse cx="60.5" cy="44" rx="5.8" ry="7" class="km-green" />
+  <circle cx="37.8" cy="41.2" r="2.1" class="km-white" />
+  <circle cx="58.8" cy="41.2" r="2.1" class="km-white" />
+
+  <!-- Smile -->
+  <path class="km-smile" d="M31 62 Q50 76 69 62" />
+</svg>

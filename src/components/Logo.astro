@@ -1,9 +1,14 @@
 ---
 import { SITE } from 'astrowind:config';
+import LogoMark from '~/components/LogoMark.astro';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="inline-flex items-center gap-2 self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold whitespace-nowrap lowercase"
+  aria-label={SITE?.name}
 >
-  🚀 {SITE?.name}
+  <LogoMark class="h-[2.24em] w-[2.24em] shrink-0 text-stone-800 dark:text-white" />
+  <span class="inline-flex shrink-0 items-baseline" aria-hidden="true">
+    <span class="text-stone-800 dark:text-white">knowledge</span><span class="text-accent dark:text-emerald-400">monkey</span>
+  </span>
 </span>

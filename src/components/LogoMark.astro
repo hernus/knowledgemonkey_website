@@ -1,0 +1,24 @@
+---
+/**
+ * Wordmark mascot — rasterized from `src/assets/images/logo1.svg` so the header
+ * stays in sync with the asset file and picks up hashed URLs in production builds.
+ */
+import logoMark from '~/assets/images/logo1.svg';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'h-[1.12em] w-[1.12em] shrink-0 text-gray-800 dark:text-white' } = Astro.props;
+---
+
+<img
+  src={logoMark.src}
+  alt=""
+  width="100"
+  height="100"
+  class:list={[className, 'object-contain']}
+  aria-hidden="true"
+  loading="eager"
+  decoding="async"
+/>

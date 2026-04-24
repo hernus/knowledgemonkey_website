@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -13,231 +12,175 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- HeroText ******************* -->
 
   <HeroText
     tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    title="Free forever core. Pro when you need more."
+    subtitle="Capture, organize and converse with your knowledge for free, on every platform. Upgrade only if you want premium cloud LLMs, advanced collaboration, or team workspaces."
   />
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Pricing ******************* -->
 
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    title="Pick your plan"
+    subtitle="Start free. No credit card. Switch any time."
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
+        title: 'Free',
+        subtitle: 'Everything you need to get going',
+        price: 0,
+        period: 'forever',
+        items: [
+          { description: 'Unlimited notes & knowledge chunks' },
+          { description: 'Tree, mind map and list views' },
+          { description: 'Hands-free voice capture & chat' },
+          { description: 'Web, iOS and Android' },
+          { description: 'Bring your own LLM API key (GPT, Claude, Perplexity…)' },
+          { description: 'Export everything as Markdown / TXT / CSV' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Start free',
+          href: 'https://app.knowledgemonkey.com',
+        },
+      },
+      {
+        title: 'Pro',
+        subtitle: 'For builders, students and creators',
+        price: 12,
         period: 'per month',
         items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
+          { description: 'Everything in Free' },
+          { description: 'Cloud LLM credits included (no API key needed)' },
+          { description: 'Premium voices for hands-free mode' },
+          { description: 'Unlimited shareable knowledge projects' },
+          { description: 'Priority sync across devices' },
+          { description: 'Email support' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-      },
-      {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Go Pro',
+          href: 'https://app.knowledgemonkey.com',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: 'most popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'Teams',
+        subtitle: 'For study groups, classrooms and small companies',
+        price: 24,
+        period: 'per user / month',
         items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
+          { description: 'Everything in Pro' },
+          { description: 'Shared team workspaces' },
+          { description: 'Granular permissions on projects & chunks' },
+          { description: 'Centralized billing & admin' },
+          { description: 'SSO (coming soon)' },
+          { description: 'Priority support' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Talk to us',
+          href: '/contact',
         },
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 ************** -->
 
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="What's included on every plan"
+    subtitle="The core of KnowledgeMonkey is free, on every device, forever."
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
+        title: 'No data lock-in',
+        description: 'Export your full brain at any time as Markdown, TXT or CSV. Take it with you, always.',
+        icon: 'tabler:download',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
+        title: 'AI-searchable knowledge',
+        description: 'Every chunk is semantically indexed. Find anything by meaning, not keywords.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
+        title: 'Multi-LLM support',
+        description: 'Switch between GPT, Claude, Perplexity and more — per project or per question.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
+        title: 'Hands-free everywhere',
+        description: 'Voice-first capture and conversation, on web, iOS and Android.',
+        icon: 'tabler:microphone',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
+        title: 'ChatGPT integration',
+        description: 'Plug KnowledgeMonkey into ChatGPT and let it remember everything across sessions.',
+        icon: 'tabler:plug-connected',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
+        title: 'Sharing & collaboration',
+        description: 'Bundle chunks into projects. Share read-only, or invite contributors. Up to you.',
+        icon: 'tabler:share-3',
       },
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
-    isReversed={true}
-    items={[
-      {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
-      },
-      {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
-      },
-      {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
-      },
-      {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- FAQs Widget ******************* -->
+  <!-- FAQs ******************* -->
 
   <FAQs
     title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    subtitle="Real answers to real questions about plans, billing and what stays free."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'Is the Free plan really free forever?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          "Yes. The Free plan is unlimited and stays free. The only thing it does not include is cloud LLM credits — bring your own API key on Free, or upgrade to Pro to use ours.",
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: "What's the difference between Free and Pro?",
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'Free gives you the entire core product on every platform — but you provide your own LLM API key. Pro removes that step by including cloud LLM credits, premium voices, advanced sharing and priority sync.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'Can I cancel any time?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Yep. Cancel from the app in two taps. Your account drops back to Free and your data stays exactly where it is.',
+      },
+      {
+        title: 'Do you offer a student discount?',
+        description:
+          'We do — and it is generous. Email us from a student address and we will sort you out.',
+      },
+      {
+        title: 'How does Teams billing work?',
+        description:
+          'Teams is billed per active seat per month, with one consolidated invoice. Add and remove members from the admin panel any time.',
       },
       {
         title: 'What payment methods do you accept?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
-      },
-      {
-        title: 'Are there any hidden fees beyond the displayed cost?',
-        description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'All major credit and debit cards, Apple Pay and Google Pay. App Store and Play Store billing for mobile subscriptions.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- CallToAction *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Try it free. Upgrade when (and if) you need to."
+    subtitle="No credit card required to get started. Your knowledge is yours forever."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: 'Start free',
+        href: 'https://app.knowledgemonkey.com',
+        target: '_blank',
+        icon: 'tabler:rocket',
       },
     ]}
   />

@@ -34,7 +34,7 @@ export const headerData = {
   actions: [
     {
       text: 'Get the app',
-      href: 'https://knowledgemonkey.ai',
+      href: 'https://app.knowledgemonkey.ai',
       target: '_blank',
       icon: 'tabler:arrow-up-right',
     },
@@ -56,7 +56,7 @@ export const footerData = {
     {
       title: 'Platforms',
       links: [
-        { text: 'Web app', href: 'https://knowledgemonkey.ai' },
+        { text: 'Web app', href: 'https://app.knowledgemonkey.ai' },
         { text: 'iOS', href: '#' },
         { text: 'Android', href: '#' },
         { text: 'ChatGPT integration', href: '#' },
